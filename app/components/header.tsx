@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { ArrowUpRight, ChevronRight } from "lucide-react";
 
 export default function Header() {
@@ -9,7 +9,7 @@ export default function Header() {
         "https://i.pravatar.cc/100?img=12",
         "https://i.pravatar.cc/100?img=32",
     ];
-    const containerVariants = {
+    const containerVariants: Variants = {
         hidden: {},
         show: {
             transition: {
@@ -19,27 +19,28 @@ export default function Header() {
         },
     };
 
-    const fadeUp = {
+    const fadeUp: Variants = {
         hidden: { opacity: 0, y: 24 },
         show: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] },
+            transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as const },
         },
     };
 
-    const fadeIn = {
+    const fadeIn: Variants = {
         hidden: { opacity: 0 },
         show: {
             opacity: 1,
-            transition: { duration: 0.6, ease: "easeOut" },
+            transition: { duration: 0.6, ease: "easeOut" as const },
         },
     };
-    const fadeRight = {
+    const fadeRight: Variants = {
         hidden: { x: -20, opacity: 0 },
         show: {
-            x: 0, opacity: 1,
-            transition: { duration: 0.6, ease: "easeOut" },
+            x: 0,
+            opacity: 1,
+            transition: { duration: 0.6, ease: "easeOut" as const },
         },
     };
 
