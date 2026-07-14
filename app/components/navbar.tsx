@@ -1,0 +1,36 @@
+"use client"
+
+import { easeIn, easeInOut, easeOut, motion } from "framer-motion"
+
+export default function Navbar() {
+    return (
+        <div className="flex justify-between px-15 py-7 text-center items-center">
+            <div className="text-[#1F1F1F] text-4xl ">
+                ClearDent
+            </div>
+            <div className="text-[#252525] flex gap-7 text-xl ">
+                <ul className="">
+                    About
+                </ul>
+                <ul className="">
+                    Services
+                </ul>
+                <ul className="">
+                    Our Doctors
+                </ul>
+                <ul className="">
+                    Reviews
+                </ul>
+            </div>
+            <div className="">
+                <motion.button className="text-[#1F1F1F] border border-[#1F1F1F]/50 rounded-xl px-5 py-3 font-semibold "
+                    whileHover={{ scale: 1.05, borderColor: "rgba(37, 37, 37, 1)" }}
+                    transition={{ duration: 0.15 }}
+                    whileTap={{ scale: 1 }}
+                >
+                    Book Appointment
+                </motion.button>
+            </div>
+        </div>
+    )
+}
