@@ -9,18 +9,18 @@ export default function Navbar() {
                 ClearDent
             </div>
             <div className="text-[#252525] flex gap-7 text-xl ">
-                <ul className="">
+                <button className="">
                     About
-                </ul>
-                <ul className="">
+                </button>
+                <button className="">
                     Services
-                </ul>
-                <ul className="">
+                </button>
+                <button className="">
                     Our Doctors
-                </ul>
-                <ul className="">
+                </button>
+                <button className="">
                     Reviews
-                </ul>
+                </button>
             </div>
             <div className="">
                 <motion.button className="text-[#1F1F1F] border border-[#1F1F1F]/50 rounded-xl px-5 py-3 font-semibold "
