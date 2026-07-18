@@ -11,7 +11,7 @@ export default function About() {
         { value: "99%", label: "patient satisfaction rate" },
     ];
     return (
-        <div className="px-15 mt-50 flex flex-col gap-7 mb-50">
+        <div className="px-6 mt-24 mb-24 flex flex-col gap-7 lg:px-15 lg:mt-50 lg:mb-50">
             <motion.div className="flex items-center text-center gap-3"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 3 }}
@@ -24,7 +24,7 @@ export default function About() {
                     About Us
                 </span>
             </motion.div>
-            <div className="flex justify-between">
+            <div className="flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-0">
                 <div className="">
                     <motion.div className="text-[#1F1F1F] text-6xl"
                         initial={{ opacity: 0, y: 40 }}
@@ -34,8 +34,8 @@ export default function About() {
                     >
                         Expertise you can trust
                     </motion.div>
-                    <div className="bg-neutral-100 py-16 px-6">
-                        <div className="max-w-3xl grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-10">
+                    <div className="bg-neutral-100 py-10 px-4 mt-6 lg:py-16 lg:px-6 lg:mt-0">
+                        <div className="max-w-full lg:max-w-3xl grid grid-cols-1 sm:grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10">
                             {stats.map((stat, i) => (
                                 <motion.div
                                     key={i}
@@ -59,11 +59,11 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-                <div className="relative w-fit">
+                <div className="relative w-full mt-8 lg:w-fit lg:mt-0">
                     <motion.img
                         src="/about-1.jpg"
                         alt=""
-                        className="w-[800px] h-[500px] object-cover rounded-4xl"
+                        className="w-full h-[280px] sm:h-[380px] object-cover rounded-4xl lg:w-[800px] lg:h-[500px]"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 3 }}
                         transition={{ duration: 0.6, delay: 1.7 }}
@@ -71,7 +71,7 @@ export default function About() {
                     />
 
                     {/* Top Left Card */}
-                    <motion.div className="absolute top-14 -left-20 bg-white rounded-2xl px-6 py-5 shadow-xl"
+                    <motion.div className="absolute top-4 left-4 bg-white rounded-2xl px-6 py-5 shadow-xl lg:top-14 lg:-left-15"
                         initial={{ opacity: 0, scale: 0 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{
@@ -93,7 +93,7 @@ export default function About() {
                     </motion.div>
 
                     {/* Bottom Card */}
-                    <motion.div className="absolute bottom-15  -translate-x-1/3 bg-white rounded-xl px-5 py-3 shadow-xl"
+                    <motion.div className="absolute left-1/2 -translate-x-1/2 bottom-4 bg-white rounded-xl px-5 py-3 shadow-xl lg:left-auto lg:-translate-x-1/3 lg:bottom-15"
                         initial={{ opacity: 0, scale: 0 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{

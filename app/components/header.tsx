@@ -45,9 +45,9 @@ export default function Header() {
     };
 
     return (
-        <div className="bg-[#F2F2F2] flex flex-col justify-between text-[#1F1F1F] px-15 py-10">
+        <div className="bg-[#F2F2F2] flex flex-col justify-between text-[#1F1F1F] px-6 py-8 lg:px-15 lg:py-10">
             <motion.div
-                className="flex justify-between"
+                className="flex flex-col gap-8 lg:flex-row lg:justify-between lg:gap-0"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="show"
@@ -62,16 +62,16 @@ export default function Header() {
                     </motion.div>
 
                     <motion.div
-                        className="text-7xl max-w-2xl"
+                        className="text-7xl max-w-full lg:max-w-2xl"
                         variants={fadeUp}
                     >
                         Advanced dentistry for every smile
                     </motion.div>
                 </div>
 
-                <div className="py-15">
+                <div className="py-0 lg:py-15">
                     <motion.div
-                        className="text-[#787878] text-2xl max-w-sm"
+                        className="text-[#787878] text-2xl max-w-full sm:max-w-sm"
                         variants={fadeIn}
                         viewport={{ once: true, amount: 0.3 }}
                     >
@@ -79,7 +79,7 @@ export default function Header() {
                     </motion.div>
 
                     <motion.div
-                        className="mt-5 flex items-center"
+                        className="mt-5 flex flex-wrap items-center gap-3 lg:flex-nowrap lg:gap-0"
                         variants={containerVariants}
                         viewport={{ once: true, amount: 0.3 }}
                     >
@@ -101,16 +101,16 @@ export default function Header() {
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                             viewport={{ once: true, amount: 0.3 }}
-                            className="rounded-xl bg-[#223070] px-4 py-4 text-white will-change-transform"
+                            className="rounded-xl bg-[#223070] px-4 py-4 text-white will-change-transform lg:ml-0"
                         >
                             <ChevronRight className="h-5 w-5" />
                         </motion.button>
                     </motion.div>
                 </div>
             </motion.div>
-            <div className="w-full flex gap-5 min-w-full">
+            <div className="w-full mt-10 flex flex-col gap-5 min-w-full lg:flex-row">
                 <motion.div
-                    className="relative overflow-hidden rounded-3xl min-h-[500px] flex flex-col justify-between bg-cover bg-center"
+                    className="relative overflow-hidden rounded-3xl min-h-[380px] lg:min-h-[500px] flex flex-col justify-between bg-cover bg-center"
                     style={{ backgroundImage: "url('/header-1.jpg')" }}
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -139,7 +139,7 @@ export default function Header() {
                         transition={{ duration: 0.6, delay: 0.7 }}
                         viewport={{ once: true, amount: 0.3 }}
                     >
-                        <div className="flex items-center p-8">
+                        <div className="flex items-center p-4 sm:p-8">
                             {avatars.map((src, i) => (
                                 <img
                                     key={i}
@@ -166,7 +166,7 @@ export default function Header() {
                         </button>
                     </motion.div>
                 </motion.div>
-                <motion.div className="relative overflow-hidden rounded-3xl min-h-[500px]"
+                <motion.div className="relative overflow-hidden rounded-3xl min-h-[220px] lg:min-h-[500px] w-full lg:w-auto"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.9 }}
@@ -177,12 +177,12 @@ export default function Header() {
                         style={{ backgroundImage: "url('/header-2.jpg')" }}
                     />
                     <div className="relative z-10 p-6 sm:p-8 max-w-3xl">
-                        <h2 className="text-[#1F1F1F] text-4xl sm:text-5xl -rotate-90 text-center translate-y-12/3 ">
+                        <h2 className="text-[#1F1F1F] text-4xl sm:text-5xl lg:-rotate-90 text-center translate-y-0 lg:translate-y-12/3 ">
                             Orthodontics
                         </h2>
                     </div>
                 </motion.div>
-                <motion.div className="relative overflow-hidden rounded-3xl min-h-[500px]"
+                <motion.div className="relative overflow-hidden rounded-3xl min-h-[220px] lg:min-h-[500px] w-full lg:w-auto"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 1 }}
@@ -193,7 +193,7 @@ export default function Header() {
                         style={{ backgroundImage: "url('/header-3.png')" }}
                     />
                     <div className="relative z-10 p-6 sm:p-8 max-w-3xl">
-                        <h2 className="text-[#1F1F1F] text-4xl sm:text-5xl -rotate-90 text-center translate-y-12/3 ">
+                        <h2 className="text-[#1F1F1F] text-4xl sm:text-5xl lg:-rotate-90 text-center translate-y-0 lg:translate-y-12/3 ">
                             Dental Surgery
                         </h2>
                     </div>

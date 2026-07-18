@@ -30,40 +30,40 @@ export default function Contact() {
     };
 
     return (
-        <div className="bg-[#F2F2F2] p-10 mb-30">
-            <div className="bg-[#C8E0F1] rounded-3xl flex justify-between text-[#1F1F1F] px-15 py-10">
+        <div className="bg-[#F2F2F2] p-6 mb-16 lg:p-10 lg:mb-30">
+            <div className="bg-[#C8E0F1] rounded-3xl flex flex-col lg:flex-row lg:justify-between text-[#1F1F1F] px-6 py-8 lg:px-15 lg:py-10">
                 <div className="flex flex-col gap-5">
-                    <motion.div className="text-[#1F1F1F] text-7xl max-w-xl mt-10"
+                    <motion.div className="text-[#1F1F1F] text-5xl lg:text-7xl max-w-full mt-6 lg:max-w-xl lg:mt-10"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
                         Your confidents smile starts here
                     </motion.div>
-                    <motion.div className="text-[#787878] text-2xl max-w-xl"
+                    <motion.div className="text-[#787878] text-2xl max-w-full lg:max-w-xl"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                     >
                         Schedule your consultation and let our experienced team create a treatment plan designed just for you.
                     </motion.div>
-                    <div className="flex flex-col mt-10">
-                        <motion.div className="flex gap-3"
+                    <div className="flex flex-col mt-6 lg:mt-10">
+                        <motion.div className="flex flex-col gap-3 sm:flex-row"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 0.6, delay: 0.5 }}
                         >
                             <input type="text"
                                 placeholder="Your name"
-                                className="bg-white text-[#787878] text-xl px-7 py-3 rounded-xl border border-[#C8E0F1] hover:border-[#7299C9] transition-colors "
+                                className="bg-white text-[#787878] text-xl px-7 py-3 rounded-xl border border-[#C8E0F1] hover:border-[#7299C9] transition-colors w-full sm:w-auto sm:flex-1"
                             />
                             <input type="text"
                                 placeholder="Your phone"
-                                className="bg-white text-[#787878] text-xl px-7 py-3 rounded-xl border border-[#C8E0F1] hover:border-[#7299C9] transition-colors "
+                                className="bg-white text-[#787878] text-xl px-7 py-3 rounded-xl border border-[#C8E0F1] hover:border-[#7299C9] transition-colors w-full sm:w-auto sm:flex-1"
                             />
                         </motion.div>
                         <motion.div
-                            className="mt-5 flex items-center"
+                            className="mt-5 flex flex-wrap items-center gap-3 lg:flex-nowrap lg:gap-0"
                             variants={containerVariants}
                             viewport={{ once: true, amount: 0.3 }}
                         >
@@ -74,7 +74,7 @@ export default function Contact() {
                                 whileTap={{ scale: 0.98 }}
                                 transition={{ type: "tween", duration: 0.6, ease: "easeOut", delay: 0.5 }}
                                 viewport={{ once: true, amount: 0.3 }}
-                                className="rounded-xl bg-[#223070] px-47 py-3 text-lg font-medium text-white will-change-transform relative z-10"
+                                className="rounded-xl bg-[#223070] px-8 py-3 text-lg font-medium text-white will-change-transform relative z-10 w-full sm:w-auto lg:px-47"
                             >
                                 Book Appointment
                             </motion.button>
@@ -86,15 +86,15 @@ export default function Contact() {
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 viewport={{ once: true, amount: 0.3 }}
-                                className="rounded-xl bg-[#223070] px-4 py-4 text-white will-change-transform"
+                                className="rounded-xl bg-[#223070] px-4 py-4 text-white hidden lg:block will-change-transform"
                             >
                                 <ChevronRight className="h-5 w-5" />
                             </motion.button>
                         </motion.div>
                     </div>
                 </div>
-                <div className="relative w-full max-w-[900px] py-10">
-                    {/* ORIGINAL IMAGE — untouched */}
+                <div className="relative w-full max-w-full py-8 mt-10 lg:max-w-[900px] lg:py-10 lg:mt-0">
+                    {/* ORIGINAL IMAGE — untouched at lg */}
                     <motion.div className=""
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ export default function Contact() {
                         <img
                             src="/contact-1.png"
                             alt=""
-                            className="w-130 h-130 object-cover object-top rounded-3xl ml-20"
+                            className="w-full h-[320px] sm:h-[420px] object-cover object-top rounded-3xl ml-0 lg:w-130 lg:h-130 lg:ml-20"
                         />
                     </motion.div>
 
@@ -116,7 +116,7 @@ export default function Contact() {
                             damping: 20,
                             delay: 2.3,
                         }}
-                        className="absolute top-4 left-0 bg-white rounded-2xl shadow-xl px-6 py-5 w-64 flex items-center justify-between gap-4"
+                        className="absolute top-4 left-0 bg-white rounded-2xl shadow-xl px-6 py-5 w-56 sm:w-64 flex items-center justify-between gap-4"
                     >
                         <div>
                             <p className="font-semibold text-slate-800 text-base leading-snug">
@@ -169,7 +169,7 @@ export default function Contact() {
                             damping: 20,
                             delay: 2.5,
                         }}
-                        className="absolute top-[38%] right-50 bg-white rounded-2xl shadow-xl px-6 py-5 w-64"
+                        className="absolute top-[38%] right-4 lg:right-50 bg-white rounded-2xl hidden lg:block shadow-xl px-6 py-5 w-56 sm:w-64"
                     >
                         <p className="font-semibold text-slate-800 text-base leading-snug mb-4">
                             Choose the right
@@ -205,7 +205,7 @@ export default function Contact() {
                             damping: 20,
                             delay: 2.7,
                         }}
-                        className="absolute bottom-4 left-0 bg-white rounded-2xl shadow-xl p-4 w-56"
+                        className="absolute bottom-4 left-0 bg-white rounded-2xl shadow-xl p-4 w-48 sm:w-56"
                     >
                         <p className="font-semibold text-slate-800 text-base mb-3">
                             3D Scaning

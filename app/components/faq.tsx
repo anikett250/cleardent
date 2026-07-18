@@ -38,8 +38,8 @@ export default function Faq() {
         setOpenIndex(openIndex === index ? null : index)
     }
     return (
-        <div className="px-15 mt-50 flex flex-col gap-7 mb-50">
-            <div className="flex justify-between items-center">
+        <div className="px-6 mt-24 flex flex-col gap-7 mb-24 lg:px-15 lg:mt-50 lg:mb-50">
+            <div className="flex flex-col items-start gap-6 lg:flex-row lg:justify-between lg:items-center lg:gap-0">
                 <motion.div className="flex items-center text-center gap-3"
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 3 }}
@@ -52,7 +52,7 @@ export default function Faq() {
                         Faq
                     </span>
                 </motion.div>
-                <motion.div className="text-[#1F1F1F] text-6xl mr-70"
+                <motion.div className="text-[#1F1F1F] text-6xl mr-0 lg:mr-70"
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 3 }}
                     transition={{ duration: 0.6, delay: 0 }}
@@ -63,15 +63,15 @@ export default function Faq() {
             </div>
 
 
-            <div className="flex items-end mt-10">
+            <div className="flex flex-col items-start gap-8 mt-10 lg:flex-row lg:items-end lg:gap-0">
                 {/* Left image */}
                 <div
-                    className="w-45 h-45 rounded-full bg-cover bg-center bg-no-repeat flex-shrink-0"
+                    className="w-45 h-45 rounded-full bg-cover bg-center lg:block hidden bg-no-repeat flex-shrink-0"
                     style={{ backgroundImage: "url('/faq-1.png')" }}
                 />
 
                 {/* FAQ */}
-                <div className="flex flex-col max-w-4xl w-full ml-100">
+                <div className="flex flex-col max-w-4xl w-full ml-0 lg:ml-100">
                     {faqs.map((faq, index) => {
                         const isOpen = openIndex === index
 

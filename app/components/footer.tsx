@@ -24,7 +24,7 @@ export default function Footer() {
                         New York, NY 10016
                     </p>
                     <p className="text-lg mb-5">+1 (212) 555-7483</p>
-                    <p className="text-lg">info@brightsmiledental.com</p>
+                    <p className="text-lg">info@cleardent.com</p>
                 </div>
 
                 {/* Link columns */}

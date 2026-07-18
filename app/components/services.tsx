@@ -5,8 +5,8 @@ import { Layers, ArrowUpRight } from "lucide-react"
 
 export default function Services() {
     return (
-        <div className="px-15 mt-50 flex flex-col gap-7 mb-50">
-            <div className="flex justify-between items-center">
+        <div className="px-6 mt-24 flex flex-col gap-7 mb-24 lg:px-15 lg:mt-50 lg:mb-50">
+            <div className="flex flex-col items-start gap-6 lg:flex-row lg:justify-between lg:items-center lg:gap-0">
                 <motion.div className="flex items-center text-center gap-3"
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 3 }}
@@ -16,10 +16,10 @@ export default function Services() {
                     <Layers className="w-7 h-7 text-black" />
                     <span className="text-[#1F1F1F] text-3xl"
                     >
-                        About Us
+                        Services
                     </span>
                 </motion.div>
-                <motion.div className="text-[#1F1F1F] text-6xl max-w-5xl"
+                <motion.div className="text-[#1F1F1F] lg:text-6xl text-4xl max-w-full lg:max-w-5xl"
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 3 }}
                     transition={{ duration: 0.6, delay: 0 }}
@@ -30,9 +30,9 @@ export default function Services() {
             </div>
 
             {/* Three equal-height columns */}
-            <div className="flex items-stretch gap-6 mt-10">
+            <div className="flex flex-col items-stretch gap-6 mt-10 lg:flex-row">
                 {/* Column 1: Stat card (left) */}
-                <div className="w-95 flex-shrink-0">
+                <div className="w-full lg:w-95 lg:flex-shrink-0">
                     <div className="bg-white rounded-3xl shadow-sm p-8 h-full flex flex-col items-center text-center">
                         {/* Main stat */}
                         <motion.h1 className="text-7xl text-[#1F1F1F] tracking-tight"
@@ -94,8 +94,8 @@ export default function Services() {
                 </div>
 
                 {/* Column 2: Orthodontics image card (right) */}
-                <div className="flex-1">
-                    <div className="relative w-full h-full min-h-[560px] rounded-3xl overflow-hidden shadow-sm">
+                <div className="w-full flex-1">
+                    <div className="relative w-full h-full min-h-[420px] lg:min-h-[560px] rounded-3xl overflow-hidden shadow-sm">
                         {/* Background image */}
                         <motion.img
                             src="/services-1.png"
@@ -131,8 +131,8 @@ export default function Services() {
                             </div>
 
                             {/* Bottom: description + arrow button */}
-                            <div className="flex justify-between items-end">
-                                <motion.p className="text-[#1F1F1F] text-2xl max-w-md ml-6 mb-6 leading-snug"
+                            <div className="flex flex-col gap-4 items-start px-6 pb-6 lg:flex-row lg:justify-between lg:items-end lg:gap-0 lg:px-0 lg:pb-0">
+                                <motion.p className="text-[#1F1F1F] text-2xl max-w-md lg:ml-6 lg:mb-6 leading-snug"
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: 1 }}
                                     transition={{ duration: 0.6, delay: 0.75 }}
@@ -143,7 +143,7 @@ export default function Services() {
                                 <motion.button
                                     type="button"
                                     aria-label="View dental treatment details"
-                                    className="h-17 w-22 rounded-tl-2xl bg-blue-900/90 hover:bg-blue-900 transition-colors flex items-center justify-center shadow-md"
+                                    className="lg:h-17 lg:w-22 lg:rounded-tl-2xl h-15 w-15 rounded-2xl bg-blue-900/90 hover:bg-blue-900 transition-colors flex items-center justify-center shadow-md"
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: 1 }}
                                     transition={{ duration: 0.6, delay: 0.45 }}
@@ -157,9 +157,9 @@ export default function Services() {
                 </div>
 
                 {/* Column 3: Two stacked cards (Implantology = top, Digital Dentistry = bottom) */}
-                <div className="flex flex-col gap-6 flex-1">
+                <div className="w-full flex flex-col gap-6 lg:flex-1">
                     {/* Implantology (top) */}
-                    <div className="relative flex-1 rounded-3xl shadow-sm p-6 bg-cover bg-center flex flex-col justify-between">
+                    <div className="relative min-h-[280px] lg:min-h-0 lg:flex-1 rounded-3xl shadow-sm p-6 bg-cover bg-center flex flex-col justify-between">
                         {/* Arrow button */}
                         <motion.button
                             type="button"
@@ -209,7 +209,7 @@ export default function Services() {
 
                     {/* Digital Dentistry (bottom) */}
                     <motion.div
-                        className="relative flex-1 rounded-3xl shadow-sm p-6 bg-cover bg-center flex flex-col justify-between bg-no-repeat"
+                        className="relative min-h-[280px] lg:min-h-0 lg:flex-1 rounded-3xl shadow-sm p-6 bg-cover bg-center flex flex-col justify-between bg-no-repeat"
                         style={{ backgroundImage: "url('/header-2.jpg')" }}
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
